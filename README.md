@@ -1,6 +1,8 @@
 # LLM Wiki
 
-[中文说明](./README.zh-CN.md)
+> 中文用户建议直接阅读：[README.zh-CN.md](./README.zh-CN.md)
+>
+> For English readers, this page remains the default project homepage.
 
 [![Release](https://img.shields.io/github/v/release/cjian8888/llm-wiki?display_name=tag)](https://github.com/cjian8888/llm-wiki/releases)
 [![License](https://img.shields.io/github/license/cjian8888/llm-wiki)](./LICENSE)
@@ -10,6 +12,14 @@
 A local-first, continuously evolving knowledge base built around Karpathy’s LLM Wiki pattern.
 
 Instead of treating documents as files to search over and re-interpret every time, this project treats ingestion as compilation: each new source is transformed into structured wiki nodes that can accumulate, interlink, and improve over time.
+
+## At a Glance
+
+- **What it is:** a local-first LLM Wiki workflow
+- **Core runtime:** LM Studio + Docker + Python watchdog daemon
+- **Output format:** structured Markdown wiki nodes with YAML frontmatter
+- **Best fit:** Obsidian-friendly personal knowledge bases, research archives, and source-driven synthesis workflows
+- **Chinese docs:** [`README.zh-CN.md`](./README.zh-CN.md)
 
 ![LLM Wiki preview](assets/preview.svg)
 
@@ -70,7 +80,8 @@ The system is split into three layers:
 ├── docker-compose.yml
 ├── Dockerfile
 ├── requirements.txt
-└── README.md
+├── README.md
+└── README.zh-CN.md
 ```
 
 ## How It Works
