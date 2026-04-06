@@ -11,6 +11,9 @@ from pathlib import Path
 from watchdog.events import FileCreatedEvent, FileSystemEventHandler
 from watchdog.observers import Observer
 
+sys.path.insert(0, str(Path(__file__).parent))
+from ingest import run_ingest
+
 INBOX_DIR = Path(__file__).parent.parent / "inbox"
 WATCHED_EXTENSIONS = {".md", ".txt"}
 
@@ -29,10 +32,12 @@ class InboxHandler(FileSystemEventHandler):
         path = Path(event.src_path)
         if path.suffix.lower() not in WATCHED_EXTENSIONS:
             return
-        logger.info(f"[Daemon] 检测到新文件: {path.name}，准备触发摄入管道...")
-        # TODO: 调用 ingest pipeline
-        # from scripts.ingest import run_ingest
-        # run_ingest(path)
+
+        logger.info(f"[Daemon] 检测到新文件: {path.name}，触发摄入管道...")
+        try:
+            run_ingest(path)
+        except Exception as e:
+            logger.error(f"[Daemon] 摄入失败: {path.name} — {e}", exc_info=True)
 
 
 def main() -> None:
