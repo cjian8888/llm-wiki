@@ -25,19 +25,24 @@ logging.basicConfig(
 logger = logging.getLogger("wiki-daemon")
 
 
+def _should_ingest(path: Path) -> bool:
+    return path.is_file() and path.suffix.lower() in WATCHED_EXTENSIONS
+
+
+def _ingest_file(path: Path, source: str) -> None:
+    logger.info(f"[Daemon] {source}: {path.name}，触发摄入管道...")
+    try:
+        run_ingest(path)
+    except Exception as e:
+        logger.error(f"[Daemon] 摄入失败: {path.name} — {e}", exc_info=True)
+
+
 class InboxHandler(FileSystemEventHandler):
     def on_created(self, event: FileCreatedEvent) -> None:
-        if event.is_directory:
-            return
         path = Path(event.src_path)
-        if path.suffix.lower() not in WATCHED_EXTENSIONS:
+        if not _should_ingest(path):
             return
-
-        logger.info(f"[Daemon] 检测到新文件: {path.name}，触发摄入管道...")
-        try:
-            run_ingest(path)
-        except Exception as e:
-            logger.error(f"[Daemon] 摄入失败: {path.name} — {e}", exc_info=True)
+        _ingest_file(path, "检测到新文件")
 
 
 def main() -> None:
@@ -46,6 +51,10 @@ def main() -> None:
         sys.exit(1)
 
     logger.info(f"[Daemon] 启动，监听目录: {INBOX_DIR}")
+
+    for path in sorted(INBOX_DIR.iterdir()):
+        if _should_ingest(path):
+            _ingest_file(path, "发现积压文件")
 
     observer = Observer()
     observer.schedule(InboxHandler(), str(INBOX_DIR), recursive=False)
