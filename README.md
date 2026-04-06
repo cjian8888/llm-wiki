@@ -1,5 +1,7 @@
 # LLM Wiki
 
+[中文说明](./README.zh-CN.md)
+
 [![Release](https://img.shields.io/github/v/release/cjian8888/llm-wiki?display_name=tag)](https://github.com/cjian8888/llm-wiki/releases)
 [![License](https://img.shields.io/github/license/cjian8888/llm-wiki)](./LICENSE)
 [![Python](https://img.shields.io/badge/python-3.11+-blue)](./Dockerfile)
