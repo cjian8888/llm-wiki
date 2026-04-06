@@ -1,8 +1,23 @@
 # LLM Wiki
 
+[![Release](https://img.shields.io/github/v/release/cjian8888/llm-wiki?display_name=tag)](https://github.com/cjian8888/llm-wiki/releases)
+[![License](https://img.shields.io/github/license/cjian8888/llm-wiki)](./LICENSE)
+[![Python](https://img.shields.io/badge/python-3.11+-blue)](./Dockerfile)
+[![LM Studio](https://img.shields.io/badge/runtime-LM%20Studio-7c3aed)](https://lmstudio.ai/)
+
 A local-first, continuously evolving knowledge base built around Karpathy’s LLM Wiki pattern.
 
 Instead of treating documents as files to search over and re-interpret every time, this project treats ingestion as compilation: each new source is transformed into structured wiki nodes that can accumulate, interlink, and improve over time.
+
+![LLM Wiki preview](assets/preview.svg)
+
+## Idea Origin
+
+This project is an implementation of the **LLM Wiki** idea popularized by Andrej Karpathy.
+
+- Idea source: `docs/karpathy_design_pattern.md`
+- Original concept summary: persistent wiki maintenance by an LLM instead of query-time-only RAG
+- This repository adapts that pattern into a local-first, Dockerized, LM Studio-backed workflow
 
 ## Highlights
 
@@ -193,4 +208,4 @@ Planned:
 
 ## License
 
-Currently unlicensed. Add a license before public distribution if needed.
+Released under the MIT License. See [LICENSE](./LICENSE).

@@ -1,0 +1,46 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" rx="24" fill="#0F172A"/>
+  <rect x="40" y="40" width="1200" height="640" rx="20" fill="#111827" stroke="#334155"/>
+  <rect x="72" y="72" width="1136" height="56" rx="12" fill="#1E293B"/>
+  <circle cx="104" cy="100" r="8" fill="#F87171"/>
+  <circle cx="132" cy="100" r="8" fill="#FBBF24"/>
+  <circle cx="160" cy="100" r="8" fill="#34D399"/>
+  <text x="190" y="106" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="24" font-weight="700">LLM Wiki — local-first knowledge compilation</text>
+
+  <rect x="72" y="152" width="280" height="464" rx="16" fill="#0B1220" stroke="#334155"/>
+  <text x="96" y="192" fill="#93C5FD" font-family="Arial, sans-serif" font-size="24" font-weight="700">Inbox</text>
+  <rect x="96" y="220" width="232" height="60" rx="12" fill="#1D4ED8" opacity="0.18"/>
+  <text x="114" y="256" fill="#DBEAFE" font-family="Arial, sans-serif" font-size="20">init-chronicle.md</text>
+  <rect x="96" y="294" width="232" height="60" rx="12" fill="#1D4ED8" opacity="0.12"/>
+  <text x="114" y="330" fill="#DBEAFE" font-family="Arial, sans-serif" font-size="20">startup-backlog.md</text>
+  <rect x="96" y="368" width="232" height="60" rx="12" fill="#1D4ED8" opacity="0.08"/>
+  <text x="114" y="404" fill="#DBEAFE" font-family="Arial, sans-serif" font-size="20">new-source.md</text>
+
+  <rect x="392" y="152" width="496" height="464" rx="16" fill="#0B1220" stroke="#334155"/>
+  <text x="416" y="192" fill="#C4B5FD" font-family="Arial, sans-serif" font-size="24" font-weight="700">Ingest Pipeline</text>
+  <rect x="432" y="232" width="416" height="76" rx="14" fill="#7C3AED" opacity="0.18"/>
+  <text x="456" y="278" fill="#F5F3FF" font-family="Arial, sans-serif" font-size="22">watchdog daemon detects file events</text>
+  <rect x="432" y="332" width="416" height="76" rx="14" fill="#7C3AED" opacity="0.14"/>
+  <text x="456" y="378" fill="#F5F3FF" font-family="Arial, sans-serif" font-size="22">loader + OpenAI-compatible client</text>
+  <rect x="432" y="432" width="416" height="76" rx="14" fill="#7C3AED" opacity="0.10"/>
+  <text x="456" y="478" fill="#F5F3FF" font-family="Arial, sans-serif" font-size="22">LM Studio extracts structured knowledge</text>
+
+  <rect x="928" y="152" width="280" height="464" rx="16" fill="#0B1220" stroke="#334155"/>
+  <text x="952" y="192" fill="#86EFAC" font-family="Arial, sans-serif" font-size="24" font-weight="700">Wiki Nodes</text>
+  <rect x="952" y="220" width="232" height="88" rx="12" fill="#16A34A" opacity="0.18"/>
+  <text x="970" y="254" fill="#DCFCE7" font-family="Arial, sans-serif" font-size="20">source_summary/</text>
+  <text x="970" y="284" fill="#DCFCE7" font-family="Arial, sans-serif" font-size="18">init-chronicle.md</text>
+  <rect x="952" y="324" width="232" height="88" rx="12" fill="#16A34A" opacity="0.12"/>
+  <text x="970" y="358" fill="#DCFCE7" font-family="Arial, sans-serif" font-size="20">YAML frontmatter</text>
+  <text x="970" y="388" fill="#DCFCE7" font-family="Arial, sans-serif" font-size="18">claims · entities · concepts</text>
+  <rect x="952" y="428" width="232" height="88" rx="12" fill="#16A34A" opacity="0.08"/>
+  <text x="970" y="462" fill="#DCFCE7" font-family="Arial, sans-serif" font-size="20">Obsidian-friendly</text>
+  <text x="970" y="492" fill="#DCFCE7" font-family="Arial, sans-serif" font-size="18">persistent compiled knowledge</text>
+
+  <path d="M352 384H392" stroke="#60A5FA" stroke-width="6" stroke-linecap="round"/>
+  <path d="M888 384H928" stroke="#A78BFA" stroke-width="6" stroke-linecap="round"/>
+  <path d="M378 384L360 372V396L378 384Z" fill="#60A5FA"/>
+  <path d="M914 384L896 372V396L914 384Z" fill="#A78BFA"/>
+
+  <text x="72" y="660" fill="#94A3B8" font-family="Arial, sans-serif" font-size="20">Inspired by Andrej Karpathy’s LLM Wiki pattern · Built as a local-first LM Studio workflow</text>
+</svg>
