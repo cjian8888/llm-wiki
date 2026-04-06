@@ -1,0 +1,8 @@
+services:
+  wiki-daemon:
+    build: .
+    container_name: wiki-daemon
+    volumes:
+      - .:/app
+    restart: unless-stopped
+    command: python scripts/daemon.py
