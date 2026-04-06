@@ -4,5 +4,7 @@ services:
     container_name: wiki-daemon
     volumes:
       - .:/app
+    env_file:
+      - .env
     restart: unless-stopped
     command: python scripts/daemon.py
